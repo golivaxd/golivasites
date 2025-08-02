@@ -23,13 +23,30 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
+      padding-top: 80px; /* espacio para el encabezado fijo */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
       min-height: 100vh;
       text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #ffffffcc;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px var(--shadow-color);
+      padding: 1rem 2rem;
+      text-align: left;
+      z-index: 1000;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      font-weight: 700;
     }
 
     h1 {
@@ -83,6 +100,10 @@
         font-size: 1rem;
       }
 
+      header h2 {
+        font-size: 1.2rem;
+      }
+
       footer {
         font-size: 0.8rem;
       }
@@ -90,14 +111,20 @@
   </style>
 </head>
 <body>
-  <h1>Goliva Sites</h1>
+
+  <header>
+    <h2>Goliva Sites</h2>
+  </header>
+
+  <h1>¡Hola!</h1>
 
   <div class="image-container">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_hQLioB0xUVtqBxAPrSNnsVjObJgmwH-Yi6RmFmSo16XCTEWPyDm3tU&s=10" alt="Imagen elegante" />
   </div>
 
-  <p>wink</p>
+  <p>wink.</p>
 
   <footer>@golivaxd</footer>
+
 </body>
 </html>
