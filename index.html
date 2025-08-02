@@ -2,11 +2,98 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goliva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #a259ff;
+      --bg-color: #f5f2ff;
+      --text-color: #2d2d2d;
+      --accent-color: #d1b3ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .image-container {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 1.5rem;
+      box-shadow: 10px 10px 20px #d6d1eb, -10px -10px 20px #ffffff;
+      transition: transform 0.3s ease;
+      max-width: 90vw;
+    }
+
+    .image-container:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: var(--primary-color);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Holaaa mira esto</h1>
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_hQLioB0xUVtqBxAPrSNnsVjObJgmwH-Yi6RmFmSo16XCTEWPyDm3tU&s=10" alt="Imagen de ejemplo" width="300">
-  <p>wink</p>
+  <h1>Hi, look, it's incredible </h1>
+  <div class="image-container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_hQLioB0xUVtqBxAPrSNnsVjObJgmwH-Yi6RmFmSo16XCTEWPyDm3tU&s=10" alt="Imagen genial">
+  </div>
+  <p> wink </p>
 </body>
 </html>
